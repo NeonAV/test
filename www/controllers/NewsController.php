@@ -5,11 +5,22 @@ class NewsController
 
     public function actionAll()
     {
-        var_dump(
+        $article = new NewsModel();
 
-            NewsModel::findAll()
+        $article->title = 'Привет 2!';
+        $article->text = 'Привет, мир 2!';
+        $article->insert();
 
-        );
+
+
+
+
+
+
+
+
+
+
 
 
         die;
