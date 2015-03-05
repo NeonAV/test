@@ -5,11 +5,10 @@ class NewsController
 
     public function actionAll()
     {
-        $article = new NewsModel();
+        $art = NewsModel::findOneByColumn('title', 'Новый заголовок');
+        $art->title = 'Новый заголовок 123';
+        $art->save();
 
-        $article->title = 'Привет 2!';
-        $article->text = 'Привет, мир 2!';
-        $article->insert();
 
 
 
